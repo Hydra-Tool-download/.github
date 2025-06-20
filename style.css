@@ -1,0 +1,95 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  /* Full-screen gradient background with deep teal to midnight navy */
+  background: linear-gradient(135deg, #006064 0%, #001440 100%);
+  min-height: 100vh;
+  color: white;
+}
+
+/* Center the container using flexbox vertically and horizontally */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Style the card as a semi-transparent panel with backdrop-filter blur */
+.card {
+  background-color: rgba(0, 25, 40, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 480px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-content {
+  padding: 32px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Style the SVG icon to be positioned in the top-right of the card */
+.icon {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style h1 in a clean sans-serif, moderate size */
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+/* Style loader and status in a lighter weight */
+#loader, #status {
+  font-weight: 300;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+
+/* Ensure responsive design even on small screens */
+@media (max-width: 480px) {
+  .card {
+    margin: 0 16px;
+  }
+  
+  h1 {
+    font-size: 1.6rem;
+  }
+  
+  #loader, #status {
+    font-size: 1rem;
+  }
+  
+  .card-content {
+    padding: 24px;
+  }
+}
